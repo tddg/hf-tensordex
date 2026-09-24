@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hf-tensordex"
+version = "0.0.1"
+description = "hf CLI extension: store models in your Hugging Face bucket with TensorDex tensor-level dedup and delta compression, transparently"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+# tensordex-service (which contains tensordex_client) and the tensordex kernels are installed from the
+# release wheels declared in `manifest.json`-adjacent docs; PyPI publication will replace these URLs.
+dependencies = [
+    "tensordex-service @ https://github.com/tddg/tensordex-service/releases/download/v0.0.1/tensordex_service-0.0.1-py3-none-any.whl",
+    "tensorlens @ https://github.com/tddg/tensorlens/releases/download/v0.1.0/tensorlens-0.1.0-py3-none-any.whl",
+    "huggingface_hub>=1.0",
+    "typer>=0.12",
+    "rich>=13",
+]
+
+[project.scripts]
+hf-tensordex = "hf_tensordex.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

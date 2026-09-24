@@ -1,0 +1,5 @@
+{
+  "name": "tensordex",
+  "description": "Store models in your Hugging Face bucket with TensorDex tensor-level dedup and delta compression, transparently.",
+  "type": "python"
+}
