@@ -14,4 +14,6 @@ hf tensordex rm / restore / get / info / status / estimate / materialize
 ```
 
 Configuration: `TDX_ENDPOINT` (control-plane URL); your `hf auth login` token is used for both the
-service and the bucket. Requires Python ≥ 3.10; no Rust toolchain (prebuilt kernel wheels).
+service and the bucket. Requires Python ≥ 3.10. The client contains no compression planning or encoding logic: it hashes,
+uploads, downloads and reconstructs (decode-only kernel wheel `tensordex-decode`). Fingerprinting,
+planning and compression run in the TensorDex service.
