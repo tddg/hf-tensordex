@@ -10,8 +10,8 @@ requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
 dependencies = [
     # Wheels are published as GitHub release assets of this repo (PyPI later). Linux x86_64 only for now.
-    "tensordex-client @ https://github.com/tddg/hf-tensordex/releases/download/v0.0.1/tensordex_client-0.0.3-py3-none-any.whl",
-    "tensordex-common @ https://github.com/tddg/hf-tensordex/releases/download/v0.0.1/tensordex_common-0.0.2-py3-none-any.whl",
+    "tensordex-client @ https://github.com/tddg/hf-tensordex/releases/download/v0.0.1/tensordex_client-0.0.4-py3-none-any.whl",
+    "tensordex-common @ https://github.com/tddg/hf-tensordex/releases/download/v0.0.1/tensordex_common-0.0.3-py3-none-any.whl",
     "tensordex-decode @ https://github.com/tddg/hf-tensordex/releases/download/v0.0.1/tensordex_decode-0.0.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
     "huggingface_hub>=1.0",
     "typer>=0.12",
